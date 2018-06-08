@@ -5,7 +5,7 @@
     <div class="toubu">
       <div role="button">
         <a class="userImg" href="">
-          <img class="userImg" src="https://scontent-frt3-2.cdninstagram.com/vp/3d38d0a116646360fe0ea55b3653e594/5B9E635B/t51.2885-19/s150x150/14719833_310540259320655_1605122788543168512_a.jpg" alt="instagram 的头像">
+          <img class="userImg" src="http://pic5.58cdn.com.cn/zhuanzh/n_v1bkuyfvltjuifpjbky4aq.jpg" alt="instagram 的头像">
         </a>
       </div>
       <div class="userName">
@@ -34,7 +34,7 @@
     <div class="toubu">
       <div role="button">
         <a class="userImg" href="">
-          <img class="userImg" src="https://scontent-frt3-2.cdninstagram.com/vp/3d38d0a116646360fe0ea55b3653e594/5B9E635B/t51.2885-19/s150x150/14719833_310540259320655_1605122788543168512_a.jpg" alt="instagram 的头像">
+          <img class="userImg" src="http://pic5.58cdn.com.cn/zhuanzh/n_v1bkuyfvltjuifpjbky4aq.jpg" alt="instagram 的头像">
         </a>
       </div>
       <div class="userName">
@@ -98,6 +98,7 @@
   }
   .userImg{
     display:block;
+    border-radius: 50%;
     width: 30px;
     height: 30px;
   }

@@ -30,4 +30,10 @@ export default {
   -webkit-transition: width 2s;
   -o-transition: width 2s;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: "transparent";
+}
 </style>

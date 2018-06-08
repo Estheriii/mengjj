@@ -1,8 +1,12 @@
 <template>
 	<div class="addBox">
-		<span class="iconfont icon-album"  @click="chose()"></span>
-		<span class="iconfont icon-photo"  @click="tekep()"></span>
-
+    <camera v-show="takep" device-position="back" flash="off" binderror="error" ></camera>
+    <div :style="{height:vv+'px'}"></div>
+    <div class="comp" >
+		  <span class="iconfont icon-album"  @click="chose()"></span>
+		  <span class="iconfont icon-photo"  @click="take()"></span>
+    </div>
+    <image mode="widthFix" :src="tempFilePaths"></image>
 	</div>
 </template>
 
@@ -10,7 +14,9 @@
 	export default{
 	data () {
     return {
-      tempFilePaths:''
+      tempFilePaths:'',
+      takep:false,
+      vv:0
       }
   },
   methods:{
@@ -28,7 +34,8 @@
 
       }
     ,
-    takep(){
+    take(){
+
      wx.createCameraContext().takePhoto({    
       quality:'high',
       success:(res)=>{
@@ -37,19 +44,41 @@
       }
      })
     }
+  },
+  created(){
+      this.vv=wx.getSystemInfoSync().windowHeight-80-50
+      //console.log(this.vh)
+      this.takep=true;
   }
 	}
 </script>
 <style>
 .addBox{
-	display:flex;
-	justify-content:space-around;
-	align-items:center;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    padding:100rpx 0;
+    box-sizing:border-box;
+
 }
 
 .addBox  .iconfont{
     font-family: iconfont;
-    font-size:80px;
+    font-size:50px;
     color:#ffaaa5;
+  }
+  camera{
+    position:relative;
+    width:100%;
+    display:block;
+    overflow:hidden;
+    height: 300px;
+
+
+  }
+  .comp{
+    display: flex;
   }
 </style>
