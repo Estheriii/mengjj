@@ -3,6 +3,7 @@
 技术栈：前端基于Vue-cli+MpVue，后端基于Node.js+Express+MongoDB
 
 前端部分预览：
+![](https://github.com/Estheriii/mengjj/blob/master/static/preview.gif)
 
 ## Build Setup
 
